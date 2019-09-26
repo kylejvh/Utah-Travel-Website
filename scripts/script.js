@@ -74,6 +74,7 @@ lightGallery(document.getElementById("gallery-container"), {
   cssEasing: "cubic-bezier(0.25, 0, 0.25, 1)",
   download: false,
   thumbnail: true,
-  thumbWidth: 150,
-  thumbMargin: 10
+  thumbWidth: 125,
+  thumbMargin: 10,
+  selector: "a"
 });
