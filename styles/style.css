@@ -16,7 +16,7 @@ body {
 }
 
 .background {
-  background-image: url(/img/bg.jpg);
+  background-image: url(img/bg.jpg);
   background-position: center;
   background-attachment: scroll;
   background-repeat: no-repeat;
@@ -28,13 +28,13 @@ body {
 
 @media screen and (max-width: 1500px) {
   .background {
-    background-image: url(/img/bg-2080.jpg);
+    background-image: url(img/bg-2080.jpg);
   }
 }
 
 @media screen and (max-width: 800px) {
   .background {
-    background-image: url(/img/bg-1040.jpg);
+    background-image: url(img/bg-1040.jpg);
   }
 }
 
