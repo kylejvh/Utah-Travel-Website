@@ -386,19 +386,19 @@ flex-grow: 3;
 }
 
 .panel1 {
-  background-image: url(../photos/comptest/left.jpg);
+  background-image: url(/img/cpg/left.jpg);
 }
 .panel2 {
-  background-image: url(../photos/comptest/leftmiddle.jpg);
+  background-image: url(/img/cpg/leftmiddle.jpg);
 }
 .panel3 {
-  background-image: url(../photos/comptest/center.jpg);
+  background-image: url(/img/cpg/center.jpg);
 }
 .panel4 {
-  background-image: url(../photos/comptest/rightmiddle.jpg);
+  background-image: url(/img/cpg/rightmiddle.jpg);
 }
 .panel5 {
-  background-image: url(../photos/comptest/right.jpg);
+  background-image: url(/img/cpg/right.jpg);
 }
 
 /* Flex Items */
