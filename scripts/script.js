@@ -1,11 +1,31 @@
+// Homepage VanillaTilt Code
+
+VanillaTilt.init(document.querySelector(".background"), {
+  max: 5,
+  speed: 400,
+  reverse: false,
+  startX: 0,
+  startY: 0,
+  perspective: 2000,
+  scale: 1,
+  transition: true,
+  axis: null,
+  reset: true,
+  easing: "cubic-bezier(.03,.98,.52,.99)",
+  gyroscope: true,
+  gyroscopeMinAngleX: -45,
+  gyroscopeMaxAngleX: 45,
+  gyroscopeMinAngleY: -45,
+  gyroscopeMaxAngleY: 45
+});
+
 // add eventlistener to photo elemets
 // make a function to transform clicked element to fullscreen, or to grow flex element.
 
 const imageModal = function(e) {
   let modal = document.querySelector("#myModal");
-  let srcImage = e.srcElement.src;
+  let srcImage = e.srcElement.currentSrc;
   let modalImg = document.getElementById("img01");
-
   modal.style.display = "block";
   modalImg.src = srcImage;
 };
@@ -70,8 +90,8 @@ panels.forEach(panel => panel.addEventListener("transitionend", toggleActive));
 // lightgallery Code
 
 lightGallery(document.getElementById("gallery-container"), {
-  mode: "lg-fade",
-  cssEasing: "cubic-bezier(0.25, 0, 0.25, 1)",
+  mode: "lg-soft-zoom", //  "lg-slide-skew", "lg-scale-up" "lg-soft-zoom"
+  cssEasing: "cubic-bezier(0.445, 0.050, 0.550, 0.950)",
   download: false,
   thumbnail: true,
   thumbWidth: 125,
