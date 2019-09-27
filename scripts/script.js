@@ -3,20 +3,7 @@
 VanillaTilt.init(document.querySelector(".background"), {
   max: 5,
   speed: 400,
-  reverse: false,
-  startX: 0,
-  startY: 0,
-  perspective: 2000,
-  scale: 1,
-  transition: true,
-  axis: null,
-  reset: true,
-  easing: "cubic-bezier(.03,.98,.52,.99)",
-  gyroscope: true,
-  gyroscopeMinAngleX: -45,
-  gyroscopeMaxAngleX: 45,
-  gyroscopeMinAngleY: -45,
-  gyroscopeMaxAngleY: 45
+  perspective: 2000
 });
 
 // add eventlistener to photo elemets
