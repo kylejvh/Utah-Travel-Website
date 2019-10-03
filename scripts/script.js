@@ -60,12 +60,10 @@ homepageText.forEach(text => text.addEventListener("click", checkThis));
 const panels = document.querySelectorAll(".panel");
 
 function toggleOpen() {
-  console.log("Hello");
   this.classList.toggle("open");
 }
 
 function toggleActive(e) {
-  console.log(e.propertyName);
   if (e.propertyName.includes("flex")) {
     this.classList.toggle("open-active");
   }
@@ -77,7 +75,7 @@ panels.forEach(panel => panel.addEventListener("transitionend", toggleActive));
 // lightgallery Code
 
 lightGallery(document.getElementById("gallery-container"), {
-  mode: "lg-soft-zoom", //  "lg-slide-skew", "lg-scale-up" "lg-soft-zoom"
+  mode: "lg-slide", //  "lg-slide-skew", "lg-scale-up" "lg-soft-zoom"
   cssEasing: "cubic-bezier(0.445, 0.050, 0.550, 0.950)",
   download: false,
   thumbnail: true,
