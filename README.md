@@ -13,7 +13,9 @@
 
 - Uses CSS Grid with basic JavaScript onClick events to display images in popup modal style.    
 
-- Uses a premade flexbox gallery I modified to be responsive by altering flex directions and animations. See ## Dependencies/Attribution.
+- Uses a premade flexbox gallery I modified to be responsive by altering flex directions and animations. See
+[Dependencies/Attribution](#dependenciesattribution)
+
 
 - Utilizes lightgallery.js with image srcsets for fast, lightweight browsing of photos at all screen sizes.
 
