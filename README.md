@@ -1,6 +1,6 @@
 # Utah-Travel-Website
 
-<a href="https://kylejvh.github.io/Utah-Travel-Website/">Click here to demo!<img src="background.jpg&s=200" title="Demo Preview" alt="Demo Preview"></a>
+<a href="https://kylejvh.github.io/Utah-Travel-Website/"><br>Click here to demo!</br><img src="/../photoswipe/background.jpg?raw=true" width="25%" height="25%" title="Demo Preview" alt="Demo Preview"></a>
 
 
 > This is a practice website that I built, themed around a vacation trip I took to Utah.
