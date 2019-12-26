@@ -1,6 +1,6 @@
 # Utah-Travel-Website
 
-<a href="https://kylejvh.github.io/Utah-Travel-Website/">Click here to demo!<img src="./background.jpg&s=200" title="Demo Preview" alt="Demo Preview"></a>
+<a href="https://kylejvh.github.io/Utah-Travel-Website/"><br>Click here to demo!</br><img src="/../photoswipe/background.jpg?raw=true" width="25%" height="25%" title="Demo Preview" alt="Demo Preview"></a>
 
 
 > This is a practice website that I built, themed around a vacation trip I took to Utah.
@@ -13,7 +13,9 @@
 
 - Uses CSS Grid with basic JavaScript onClick events to display images in popup modal style.    
 
-- Uses a premade flexbox gallery I modified to be responsive by altering flex directions and animations. See ## Dependencies/Attribution.
+- Uses a premade flexbox gallery I modified to be responsive by altering flex directions and animations. See
+[Dependencies/Attribution](#dependenciesattribution)
+
 
 - Utilizes lightgallery.js with image srcsets for fast, lightweight browsing of photos at all screen sizes.
 
