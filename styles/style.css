@@ -1,89 +1,87 @@
 body {
   font-family: "Montserrat";
+  margin: 0;
 }
 
-.testback {
+/* .testback {
   background-image: linear-gradient(to right, #0e5c8f, #3cc9e9) !important;
+} */
+
+/* Global Navigation Styling */
+.hero__nav {
+  -webkit-animation: nav-spread 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: nav-spread 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  justify-content: space-evenly;
+  align-self: flex-start;
+  margin-top: 2em;
+  display: flex;
+}
+
+.hero__nav a {
+  text-decoration: none;
+  font-size: 1.25em;
+}
+
+.hero__nav a:hover {
+  transform: scale(1.08);
+  color: rgb(190, 190, 190);
+}
+
+.hero__nav a:active {
+  transform: scale(1.1);
+  color: rgb(37, 37, 37);
+}
+.hero__nav--current {
+  border-bottom: 4px solid rgba(255, 255, 255, 0.651);
+}
+
+.github-icon {
+  color: white;
+}
+
+.hero_nav:visited {
+  text-decoration: none;
+}
+
+@keyframes nav-spread {
+  0% {
+    width: 50%;
+    opacity: 0.5;
+  }
+  /* 
+    50% {
+      letter-spacing: -0.2em;
+      -webkit-filter: blur(6px);
+      filter: blur(6px);
+      opacity: 0, 5;
+      mix-blend-mode: luminosity;
+    } */
+
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+.hero__textContainer {
+  margin: auto;
+  text-decoration: none;
+}
+
+.hero__buttonContainer {
+  display: flex;
+  flex-flow: column;
+}
+
+.hero_scrollContainer a,
+p {
+  text-decoration: none;
+  font-size: 1.25em;
+  margin: 0.25em;
 }
 
 /* Homepage Background Styling */
 
-.homepage {
-  padding: 0;
-  margin: 0;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.background {
-  background-image: url(../img/bg.jpg);
-  background-position: center;
-  background-attachment: scroll;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 110vh;
-  margin: -1vw -4vw -4vw -4vw;
-  padding: 0;
-}
-
-@media screen and (max-width: 1500px) {
-  .background {
-    background-image: url(../img/bg-2080.jpg);
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .background {
-    background-image: url(../img/bg-1040.jpg);
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .background {
-    margin: -2.5vw -6.5vw -6.5vw -6.5vw;
-  }
-}
-
-.backgroundtext {
-  text-align: center;
-  margin: 0 10vw 0 10vw;
-  padding-top: 68vh;
-  color: rgb(255, 255, 255);
-  font-size: 2vh;
-}
-
-.introtext {
-  -webkit-animation: focus-in-expand 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-    both;
-  animation: focus-in-expand 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
-@-webkit-keyframes focus-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    -webkit-filter: blur(12px);
-    filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-    filter: blur(0px);
-    opacity: 1;
-  }
-}
-@keyframes focus-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    -webkit-filter: blur(12px);
-    filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-    filter: blur(0px);
-    opacity: 1;
-  }
-}
 /* 
 .background h1 {
   color: rgb(255, 255, 255);
@@ -225,16 +223,6 @@ a:visited {
     width: auto;
   }
 
-  #mobilemenu {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 0.5em;
-    border-radius: 5px;
-    background-color: #a4b8c4;
-  }
-
   .navigation ul {
     display: block;
     padding: 0;
@@ -256,202 +244,6 @@ a:visited {
   }
   .navigation li a:hover {
     display: block;
-  }
-}
-
-/* Zion Page Image Block 1 */
-
-#photogroup1 {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(8, 5vw);
-  grid-gap: 15px;
-  margin: 4rem 25px 15px 25px;
-}
-
-#photogroup1 img {
-  border: 5px solid #c9c9c9;
-  border-radius: 5px;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.zionphotos img:hover {
-  cursor: pointer;
-  border-color: #e3e3e3 !important;
-}
-
-.grid1 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 5;
-}
-
-.grid2 {
-  grid-column-start: 3;
-  grid-column-end: 7;
-  grid-row-start: 1;
-  grid-row-end: 5;
-}
-
-.grid3 {
-  grid-column-start: 7;
-  grid-column-end: 9;
-  grid-row-start: 1;
-  grid-row-end: 5;
-}
-
-.grid4 {
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row-start: 5;
-  grid-row-end: 9;
-}
-
-.grid5 {
-  grid-column-start: 5;
-  grid-column-end: 9;
-  grid-row-start: 5;
-  grid-row-end: 9;
-}
-
-/* Zion Page Image Block 2 */
-
-#photogroup2 {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(8, 5vw);
-  grid-gap: 15px;
-  margin: 0 25px 0 25px;
-}
-
-#photogroup2 img {
-  border: 5px solid #6a84a2;
-  border-radius: 5px;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  margin-bottom: 3vw;
-}
-
-.gridalt1 {
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row-start: 1;
-  grid-row-end: 5;
-}
-
-.gridalt2 {
-  grid-column-start: 5;
-  grid-column-end: 9;
-  grid-row-start: 1;
-  grid-row-end: 5;
-}
-
-.gridalt3 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 5;
-  grid-row-end: 9;
-}
-
-.gridalt4 {
-  grid-column-start: 3;
-  grid-column-end: 7;
-  grid-row-start: 5;
-  grid-row-end: 9;
-}
-
-.gridalt5 {
-  grid-column-start: 7;
-  grid-column-end: 9;
-  grid-row-start: 5;
-  grid-row-end: 9;
-}
-
-/*
-.small {
-flex-basis: 45vh;
-flex-grow: 1;
-border: 1px solid blue;
-}
-
-.large {
-flex-basis: 55vh;
-flex-grow: 3;
-}
-*/
-
-/* simplify. make three images across a single row, then make the middle image grow to 2x the time of the others. Middle image is showcase. */
-
-/* modal testing */
-
-.modal {
-  /* The Modal (background) */
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
-}
-
-/* Modal Content (Image) */
-.modal-content {
-  margin: 3vh auto auto auto;
-  display: block;
-  width: 74vw;
-  max-width: 95vw;
-  border-radius: 5px;
-}
-
-.modal-content,
-#caption {
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
-
-@keyframes zoom {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-
-/* The Close Button */
-
-.modalclose {
-  position: absolute;
-  top: 55px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.modalclose:hover,
-.modalclose:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 1200px) {
-  .modal-content {
-    margin: 5rem auto auto auto;
-    width: 90vw;
-    max-width: 95vw;
   }
 }
 
@@ -696,13 +488,13 @@ If width is below 1024?? then adjust for mobile? */
 }
 
 /* lightgallery styling */
-
+/* 
 .gallerytext p {
   margin: 12vh 0 0 0;
   padding: 0 10vw 0 10vw;
   text-align: center;
   font-size: 3vw;
-}
+} */
 
 @media only screen and (min-width: 1024px) {
   .gallerytext p {
@@ -726,31 +518,4 @@ If width is below 1024?? then adjust for mobile? */
   margin: 20px;
   max-width: 296px;
   width: 32vw;
-}
-
-.image-responsive {
-  border: 3px solid #ddd;
-  width: 100%;
-  border-radius: 4px;
-  -webkit-box-shadow: 5px 5px 24px -6px rgba(0, 0, 0, 0.73);
-  -moz-box-shadow: 5px 5px 24px -6px rgba(0, 0, 0, 0.73);
-  box-shadow: 5px 5px 24px -6px rgba(0, 0, 0, 0.73);
-}
-
-.image-responsive:hover {
-  border-color: #9ad3de;
-}
-
-@media only screen and (min-width: 1300px) {
-  #gallery-container {
-    max-height: 100vh;
-  }
-  .image-responsive {
-  }
-
-  .galleryimg {
-    margin: 20px 5vw 20px 5vw;
-  }
-  .gallerytext p {
-  }
 }
