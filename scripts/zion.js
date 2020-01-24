@@ -1,6 +1,14 @@
 // add eventlistener to photo elemets
 // make a function to transform clicked element to fullscreen, or to grow flex element.
 
+let zionTitle = document.querySelector(".hero-contentwrapper");
+
+const toggleBackgroundClass = () => {
+  zionTitle.classList.toggle("active");
+};
+
+zionTitle.addEventListener("click", toggleBackgroundClass);
+
 const imageModal = e => {
   let modal = document.querySelector(".modal-wrapper");
   let srcImage = e.srcElement.currentSrc;
@@ -44,3 +52,5 @@ for (let i = 0; i < zionpictures.length; i++) {
 // span.onclick = function() {
 //   modal.style.display = "none";
 // };
+
+//! animate hero wrapper to trigger animation on click.

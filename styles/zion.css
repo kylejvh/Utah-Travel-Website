@@ -30,7 +30,7 @@ body {
   to {
     transform: translateY(0);
     height: auto;
-    margin: 2em;
+    margin: 1em;
   }
 }
 
@@ -46,17 +46,22 @@ body {
 .hero__nav a {
   text-decoration: none;
   font-size: 1.25em;
+  transition: 300ms;
+}
+
+.hero__nav a:visited {
+  color: white;
 }
 
 .hero__nav a:hover {
-  transform: scale(1.08);
+  transform: scale(1.05);
   color: rgb(190, 190, 190);
 }
 
 .hero__nav a:active {
-  transform: scale(1.1);
-  color: rgb(37, 37, 37);
+  color: rgb(148, 148, 148);
 }
+
 .hero__nav--current {
   border-bottom: 4px solid rgba(255, 255, 255, 0.651);
 }
@@ -74,7 +79,7 @@ body {
   text-align: center;
 
   background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)),
-    url(/img/znppg/z2-2000.jpg);
+    url("/img/znppg/z2.jpg");
 
   background-size: cover;
   background-position: 50% 50%;
@@ -93,11 +98,21 @@ body {
   mix-blend-mode: multiply;
   color: white;
   background-color: rgb(0, 0, 0);
-  animation: index-grow 1.25s ease 1.5s forwards;
+  /* animation: index-grow 1.25s ease 1.5s forwards; */
+  transition: all 1.25s ease;
+}
+
+.hero-contentwrapper.active {
+  background-color: rgba(0, 0, 0, 0);
+  mix-blend-mode: normal;
+}
+
+.hero-contentwrapper:hover {
+  cursor: pointer;
 }
 
 /* Working */
-@keyframes index-grow {
+/* @keyframes index-grow {
   from {
     background-color: rgb(0, 0, 0);
   }
@@ -105,12 +120,12 @@ body {
     background-color: rgba(0, 0, 0, 0);
     mix-blend-mode: normal;
   }
-}
+} */
 
 .hero-title {
   font-family: "Bungee", cursive;
   font-size: 10em;
-  margin-top: 1em;
+  margin-top: 0.25em;
   margin-bottom: 0;
   color: white;
 }
@@ -151,6 +166,7 @@ body {
 
 .hero-contentwrapper h2 {
   font-family: "Montserrat";
+  margin-bottom: 0;
   /* text-decoration: none;
   font-size: 1em;
   background: black;
@@ -170,9 +186,16 @@ body {
   /* animation: background-slide-test 1.5s ease-out 3s forwards; */
 }
 
-.hero-contentwrapper-buttonwrapper {
+.hero-buttonwrapper {
   display: flex;
   flex-flow: column;
+  font-size: 1.5em;
+  margin-bottom: 2em;
+}
+
+.hero-buttonwrapper img {
+  width: 2em;
+  height: 2em;
 }
 
 #hero-navlink-mobile {
@@ -322,31 +345,30 @@ body {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
+  /* Location of the box */
+
   top: 0;
+  left: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
 }
 
 /* Modal Content (Image) */
 .modal-content {
-  margin: auto;
+  margin: 3em;
   display: block;
   width: 80%;
-  max-width: 700px;
+
   /* display: block;
   width: 74vw;
   max-width: 95vw;
   border-radius: 5px; */
-  animation-name: zoom;
-  animation-duration: 0.6s;
+  animation: zoom-modal 0.6s ease forwards;
 }
 
-@keyframes zoom {
+@keyframes zoom-modal {
   from {
     transform: scale(0);
   }
@@ -373,10 +395,10 @@ body {
 }
 
 /* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 1200px) {
+/* @media only screen and (max-width: 1200px) {
   .modal-content {
     margin: 5rem auto auto auto;
     width: 90vw;
     max-width: 95vw;
   }
-}
+} */

@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Bungee&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
 body {
   font-family: "Montserrat";
   margin: 0;
@@ -17,20 +20,28 @@ body {
   display: flex;
 }
 
+.hero__nav a:visited {
+  color: inherit;
+}
+
+.hero__nav a:hover {
+  transform: scale(1.05);
+  color: rgb(190, 190, 190);
+}
+
+.hero__nav a:active {
+  color: rgb(124, 124, 124);
+}
+
+.hero__nav--current {
+  border-bottom: 4px solid rgba(255, 255, 255, 0.651);
+}
+
 .hero__nav a {
   text-decoration: none;
   font-size: 1.25em;
 }
 
-.hero__nav a:hover {
-  transform: scale(1.08);
-  color: rgb(190, 190, 190);
-}
-
-.hero__nav a:active {
-  transform: scale(1.1);
-  color: rgb(37, 37, 37);
-}
 .hero__nav--current {
   border-bottom: 4px solid rgba(255, 255, 255, 0.651);
 }
