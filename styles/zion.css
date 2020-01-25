@@ -5,10 +5,10 @@ body {
   background: linear-gradient(rgb(37, 37, 37), rgb(112, 111, 111));
 }
 
-.hero__nav {
-  -webkit-animation: nav-shift-down 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-    2.5s forwards;
-  animation: nav-shift-down 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2.5s
+.zion-nav {
+  -webkit-animation: nav-shift-down 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s
+    forwards;
+  animation: nav-shift-down 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s
     forwards;
   justify-content: space-evenly;
   align-self: flex-start;
@@ -29,40 +29,31 @@ body {
 
   to {
     transform: translateY(0);
-    height: auto;
+    height: 1em;
     margin: 1em;
   }
 }
 
-/* .hero__nav {
-        -webkit-animation: nav-spread 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-        animation: nav-spread 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-        justify-content: space-evenly;
-        align-self: flex-start;
-        margin-top: 2em;
-        display: flex;
-      } */
-
-.hero__nav a {
+.zion-nav a {
   text-decoration: none;
   font-size: 1.25em;
-  transition: 300ms;
+  transition: all 300ms ease;
 }
 
-.hero__nav a:visited {
+.zion-nav a:visited {
   color: white;
 }
 
-.hero__nav a:hover {
+.zion-nav a:hover {
   transform: scale(1.05);
   color: rgb(190, 190, 190);
 }
 
-.hero__nav a:active {
+.zion-nav a:active {
   color: rgb(148, 148, 148);
 }
 
-.hero__nav--current {
+.zion-nav-current {
   border-bottom: 4px solid rgba(255, 255, 255, 0.651);
 }
 
@@ -73,16 +64,11 @@ body {
 .hero-wrapper {
   height: 100vh;
   display: flex;
-
   flex-flow: column;
-  align-items: center;
-  text-align: center;
-
   background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)),
     url("/img/znppg/z2.jpg");
-
   background-size: cover;
-  background-position: 50% 50%;
+  background-position: 60% 90%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   /* transform: scale(0.5);
@@ -94,8 +80,13 @@ body {
 .hero-contentwrapper {
   width: 100%;
   height: 100vh;
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  justify-content: center;
   text-decoration: none;
   mix-blend-mode: multiply;
+  align-self: flex-end;
   color: white;
   background-color: rgb(0, 0, 0);
   /* animation: index-grow 1.25s ease 1.5s forwards; */
@@ -193,24 +184,32 @@ body {
   margin-bottom: 2em;
 }
 
+.hero-buttonwrapper a:hover > img {
+  transform: scale(1.15);
+}
+
 .hero-buttonwrapper img {
+  transition: ease 0.3s;
   width: 2em;
   height: 2em;
 }
 
-#hero-navlink-mobile {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 0.5em;
-  border-radius: 5px;
-  background-color: #a4b8c4;
+.hero-buttonwrapper a:visited {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* Top Level Gallery Div */
 .main-wrapper {
   margin: 0 1.5em 2em 1.5em;
+}
+
+.zionphotos-wrapper div {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 5vw);
+  grid-gap: 1.5em;
+  margin-top: 1.5em;
 }
 
 .zionphotos-wrapper img {
@@ -220,26 +219,19 @@ body {
   border-radius: 5px;
   object-fit: cover;
   display: block;
-  -webkit-transition: all 0.6s ease;
-  transition: all 0.6s ease;
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
 }
 
 .zionphotos-wrapper img:hover {
   cursor: pointer;
-  opacity: 0.6;
-  -webkit-transform: scale(0.95);
-  transform: scale(0.95);
+  opacity: 0.8;
+  -webkit-transform: scale(0.97);
+  transform: scale(0.97);
 }
 
 /* !! Old CSS Grid code */
 /* Zion Page Image Block 1 */
-#photogroup1 {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(8, 5vw);
-  grid-gap: 15px;
-  margin: 4rem 25px 15px 25px;
-}
 
 .grid1 {
   grid-column-start: 1;
@@ -278,14 +270,6 @@ body {
 
 /* Zion Page Image Block 2 */
 
-#photogroup2 {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(8, 5vw);
-  grid-gap: 15px;
-  margin: 0 25px 0 25px;
-}
-
 .gridalt1 {
   grid-column-start: 1;
   grid-column-end: 5;
@@ -320,10 +304,8 @@ body {
   grid-row-start: 5;
   grid-row-end: 9;
 }
-*/
 
-/*
-  .small {
+/* .small {
   flex-basis: 45vh;
   flex-grow: 1;
   border: 1px solid blue;
@@ -332,43 +314,58 @@ body {
   .large {
   flex-basis: 55vh;
   flex-grow: 3;
-  }
- 
+  } */
 
 /* simplify. make three images across a single row, then make the middle image grow to 2x the time of the others. Middle image is showcase. */
 
-/* modal testing */
+/* 
 
-.modal-wrapper {
-  /* The Modal (background) */
+    ---
+  Modal Styles
+    ---
 
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  /* Location of the box */
 
-  top: 0;
+*/
+
+/* Pop-up Div Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
   left: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  /* Enable scroll if needed */
-  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
-/* Modal Content (Image) */
+/* Modal Image Styles */
 .modal-content {
-  margin: 3em;
+  margin: auto;
   display: block;
-  width: 80%;
-
-  /* display: block;
   width: 74vw;
   max-width: 95vw;
-  border-radius: 5px; */
-  animation: zoom-modal 0.6s ease forwards;
+  border-radius: 5px;
+  -webkit-animation: zoom 0.6s ease forwards;
+  animation: zoom 0.6s ease forwards;
+  /* Old Values */
+  /* width: 80%;
+  max-width: 700px; */
 }
 
-@keyframes zoom-modal {
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes zoom {
   from {
     transform: scale(0);
   }
@@ -378,23 +375,31 @@ body {
 }
 
 /* The Close Button */
-.modalclose {
+.close {
   position: absolute;
-
+  top: 15px;
+  right: 35px;
   color: #f1f1f1;
   font-size: 40px;
   font-weight: bold;
   transition: 0.3s;
 }
 
-.modalclose:hover,
-.modalclose:focus {
+.close:hover,
+.close:focus {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
 }
 
 /* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+}
+
+/* Old Media Query */
 /* @media only screen and (max-width: 1200px) {
   .modal-content {
     margin: 5rem auto auto auto;
