@@ -14,10 +14,6 @@
 // const mobileMenuButton = document.querySelector("#mobilemenu");
 // mobileMenuButton.addEventListener("click", mobileMenuToggle);
 
-function checkThis() {
-  textDiv.classList.add("transformtext");
-}
-
 // const homepageText = document.querySelectorAll(".introtext");
 
 // const textDiv = document.querySelector(".backgroundtext");

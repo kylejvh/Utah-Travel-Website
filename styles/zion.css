@@ -34,6 +34,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 400px) {
+  .zion-nav a {
+    font-size: 1em;
+  }
+}
+
 .zion-nav a:visited {
   color: white;
 }
@@ -61,11 +67,23 @@ body {
   background-position: 60% 90%;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  /* transform: scale(0.5);
-  transition: transform ease-out 3s; */
-
   animation: hero-background-transition ease-in 3s forwards;
 }
+
+/* @media screen and (max-width: 1500px) {
+  .hero-wrapper {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)),
+      url(../img/znppg/z2-2000.jpg);
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .hero-wrapper {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)),
+      url(../img/znppg/z2-1250.jpg);
+  }
+} */
 
 .hero-contentwrapper {
   width: 100%;
@@ -103,23 +121,6 @@ body {
 .hero-contentwrapper h2 {
   font-family: "Montserrat";
   margin-bottom: 0;
-  /* text-decoration: none;
-  font-size: 1em;
-  background: black;
-  mix-blend-mode: darken;
-  color: white;
-  font-family: "Bungee", cursive; */
-
-  /* Tranisition */
-  /* -webkit-transition: color 300ms;
-  transition: color 300ms;
-  position: relative;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale; */
-  /* animation: background-slide-test 1.5s ease-out 3s forwards; */
 }
 
 .hero-buttonwrapper {
@@ -178,14 +179,12 @@ body {
 
 .zionphotos-wrapper img:hover {
   cursor: pointer;
-  filter: brightness(75%);
+  opacity: 0.85;
   -webkit-transform: scale(0.97);
   transform: scale(0.97);
 }
 
-/* !! Old CSS Grid code */
 /* Zion Page Image Block 1 */
-
 .grid1 {
   grid-column-start: 1;
   grid-column-end: 3;
@@ -222,7 +221,6 @@ body {
 }
 
 /* Zion Page Image Block 2 */
-
 .gridalt1 {
   grid-column-start: 1;
   grid-column-end: 5;
@@ -269,15 +267,10 @@ body {
   flex-grow: 3;
   } */
 
-/* simplify. make three images across a single row, then make the middle image grow to 2x the time of the others. Middle image is showcase. */
-
-/* 
-
+/*
     ---
   Modal Styles
     ---
-
-
 */
 
 /* Pop-up Div Styling */
@@ -295,7 +288,7 @@ body {
   background-color: rgba(0, 0, 0, 0.9);
 }
 
-/* Modal Image Styles */
+/* Modal Image Styling */
 .modal-content {
   margin: auto;
   display: block;
@@ -327,7 +320,7 @@ body {
   }
 }
 
-/* The Close Button */
+/* Close Button Styling */
 .close {
   position: absolute;
   top: 15px;
@@ -345,18 +338,11 @@ body {
   cursor: pointer;
 }
 
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px) {
-  .modal-content {
-    width: 100%;
-  }
-}
-
-/* Old Media Query */
-/* @media only screen and (max-width: 1200px) {
+/* Adjust modal position and width on smaller screens. */
+@media only screen and (max-width: 1200px) {
   .modal-content {
     margin: 5rem auto auto auto;
     width: 90vw;
     max-width: 95vw;
   }
-} */
+}

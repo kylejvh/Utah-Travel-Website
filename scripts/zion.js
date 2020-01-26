@@ -9,8 +9,8 @@ const toggleBackgroundClass = () => {
 
 zionTitle.addEventListener("click", toggleBackgroundClass);
 
-const zionModal = document.getElementById("myModal");
-let modalImg = document.getElementById("img01");
+const zionModal = document.getElementById("zion-modal");
+let modalImg = document.getElementById("modal-target-img");
 
 const imageModal = e => {
   const srcImage = e.srcElement.currentSrc;
