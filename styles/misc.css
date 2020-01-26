@@ -89,9 +89,6 @@ html {
   }
 }
 
-.flex-masterwrapper {
-}
-
 .misc-textwrapper h1 {
   margin: 5px 1em 0 0;
   font-size: 2em;
@@ -112,7 +109,7 @@ html {
   max-height: 75vh;
   margin-top: 2em;
   opacity: 0;
-  animation: gallery-appear 1.2s ease-in 600ms forwards;
+  animation: gallery-appear 750ms ease-in 600ms forwards;
 }
 
 @keyframes gallery-appear {
