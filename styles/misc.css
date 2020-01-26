@@ -1,11 +1,20 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 html {
   background: rgb(216, 216, 216);
 }
 
 .misc-nav {
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
+  -ms-flex-item-align: start;
   align-self: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   text-align: center;
   padding: 0.5em;
@@ -16,6 +25,8 @@ html {
 }
 
 .misc-nav a:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
   transform: scale(1.05);
   color: rgb(131, 131, 131);
 }
@@ -33,10 +44,22 @@ html {
   text-decoration: none;
   font-size: 1.25em;
   opacity: 0;
+  -webkit-transition: all 300ms ease;
+  -o-transition: all 300ms ease;
   transition: all 300ms ease;
   -webkit-animation: nav-ease-in 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94)
     forwards;
   animation: nav-ease-in 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@-webkit-keyframes nav-ease-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes nav-ease-in {
@@ -56,12 +79,29 @@ html {
 }
 
 .misc-textwrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row;
   flex-flow: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin: 1em 5em;
   opacity: 0;
+  -webkit-animation: text-appear 1s ease-in 1.5s forwards;
   animation: text-appear 1s ease-in 1.5s forwards;
+}
+
+@-webkit-keyframes text-appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes text-appear {
@@ -75,6 +115,9 @@ html {
 
 @media only screen and (max-width: 600px) {
   .misc-textwrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column;
     flex-flow: column;
   }
 
@@ -92,11 +135,15 @@ html {
 .misc-textwrapper h1 {
   margin: 5px 1em 0 0;
   font-size: 2em;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
   text-align: center;
 }
 
 .misc-textwrapper p {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
   font-size: 1em;
   margin-right: 1em;
@@ -104,12 +151,24 @@ html {
 
 /* Full Page Master Flexbox */
 .flex-masterwrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  max-height: 75vh;
+  max-height: 72vh;
   margin-top: 2em;
   opacity: 0;
+  -webkit-animation: gallery-appear 750ms ease-in 600ms forwards;
   animation: gallery-appear 750ms ease-in 600ms forwards;
+}
+
+@-webkit-keyframes gallery-appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes gallery-appear {
@@ -124,6 +183,7 @@ html {
 /* Child Images Should Obey Container's Sizing */
 .test-img {
   display: block;
+  -o-object-fit: cover;
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -139,13 +199,22 @@ html {
 
 /* First Flexbox Column Styles */
 .flex-col-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
   flex-flow: column;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
   margin: 0.5em 0 1.5em 3em;
 }
 /* First Column Div Sizing */
 .flex-col-1 > div {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
   margin: 0.5em 0.5em 0.5em 0;
   max-height: calc(33.33% - 1em);
@@ -153,25 +222,38 @@ html {
 
 /* Second Flexbox Column Styles */
 .flex-col-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column;
   flex-flow: column;
+  -webkit-box-flex: 2;
+  -ms-flex: 2;
   flex: 2;
   margin: 0.5em 3em 2em 0;
 }
 
 /* Second Column Large Sizing */
 .col-2-top {
+  -webkit-box-flex: 2;
+  -ms-flex: 2;
   flex: 2;
   margin: 0.5em 0 0.5em 0.5em;
 }
 
 .col-2-bottom-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   max-height: 33.33%;
 }
 
 /* Bottom Row Small Div Sizing */
 .col-2-bottom-row div {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
   margin: 0.5em 0.5em 0 0.5em;
 }
