@@ -1,16 +1,291 @@
-nav {
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.6),
-    rgba(0, 0, 0, 0.452)
-  );
+/* nav {
+  background: linear-gradient(rgb(37, 37, 37), rgb(112, 111, 111));
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1;
+} */
+
+/* Global Navigation Styling */
+.lake-nav {
+  background: linear-gradient(rgb(37, 37, 37), rgb(112, 111, 111));
+  justify-content: space-evenly;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 0.5em;
 }
 
-.hero__nav {
-  padding: 1em 0;
+.lake-nav a:visited {
+  color: white;
+}
+
+.lake-nav a:hover {
+  transform: scale(1.05);
+  color: rgb(190, 190, 190);
+}
+
+.lake-nav a:active {
+  color: rgb(124, 124, 124);
+}
+
+.lake-nav-current {
+  border-bottom: 4px solid rgba(255, 255, 255, 0.651);
+}
+
+.lake-nav a {
+  text-decoration: none;
+  font-size: 1.25em;
+  transform: translateY(-1000px);
+  /* transition: all 300ms ease; */
+  -webkit-animation: nav-shift-down 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    forwards;
+  animation: nav-shift-down 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes nav-shift-down {
+  from {
+    transform: translateY(-1000px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Cecret lake panel styling */
+
+/* .lakepage {
+    font-family: 'helvetica neue';
+    font-size: 20px;
+    font-weight: 200;
+  } */
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.panels {
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+
+.panel {
+  color: white;
+  text-align: center;
+  align-items: center;
+  /* Safari transitionend event.propertyName === flex */
+  /* Chrome + FF transitionend event.propertyName === flex-grow */
+  transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+    flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
+  font-size: 1.25em;
+  background-size: cover;
+  background-position: center;
+  flex: 1;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel:hover {
+  cursor: pointer;
+}
+
+/* Flex Items */
+.panel > * {
   margin: 0;
+  width: 100%;
+  transition: transform 0.5s;
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* The translate properties below should be modified
+    so that the text is only visible when the panel is minimized. */
+
+.panel > *:first-child {
+  transform: translateY(0);
+}
+.panel.open-active > *:first-child {
+  transform: translateY(-100%);
+}
+.panel > *:last-child {
+  transform: translateY(100);
+}
+.panel.open-active > *:last-child {
+  transform: translateY(100%);
+}
+
+.panel p {
+  text-transform: uppercase;
+  font-family: "Montserrat", cursive;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+  font-size: 2em;
+}
+
+.panel p:nth-child(2) {
+  font-size: 4em;
+}
+
+.panel.open {
+  flex: 5;
+  font-size: 40px;
+}
+
+.panel1 {
+  background-image: url(../img/cpg/1k/left.jpg);
+}
+.panel2 {
+  background-image: url(../img/cpg/1k/leftmiddle.jpg);
+}
+.panel3 {
+  background-image: url(../img/cpg/1k/center.jpg);
+}
+.panel4 {
+  background-image: url(../img/cpg/1k/rightmiddle.jpg);
+}
+.panel5 {
+  background-image: url(../img/cpg/1k/right.jpg);
+}
+
+@media only screen and (max-width: 600px) {
+  .panel p {
+    font-size: 1em;
+  }
+}
+
+/* filter by device height... */
+
+/* If height is between 1080 and 1440, use 1440
+  Below 1024 of width, it's not really useful
+  If width is below 1024?? then adjust for mobile? */
+
+@media only screen and (max-width: 60em) {
+  /* adjust panels for mobile here, maybe apply if height>width */
+  .panel > * {
+    margin: 0;
+    width: 100%;
+    transition: transform 0.5s;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .panels {
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .panel {
+    color: white;
+    text-align: center;
+    align-items: center;
+    /* Safari transitionend event.propertyName === flex */
+    /* Chrome + FF transitionend event.propertyName === flex-grow */
+    transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+      flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
+
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .panel > *:first-child {
+    transform: translateX(0);
+  }
+  .panel.open-active > *:first-child {
+    transform: translateX(-100%);
+  }
+  .panel > *:last-child {
+    transform: translateX(100);
+  }
+  .panel.open-active > *:last-child {
+    transform: translateX(100%);
+  }
+}
+
+/* when width is smaller than 960, break by width? */
+/* when width is greater than 960, break by height */
+
+@media only screen and (max-height: 50em), (max-width: 50em) {
+  .panel1 {
+    background-image: url(../img/cpg/600/left.jpg);
+  }
+  .panel2 {
+    background-image: url(../img/cpg/600/leftmiddle.jpg);
+  }
+  .panel3 {
+    background-image: url(../img/cpg/600/center.jpg);
+  }
+  .panel4 {
+    background-image: url(../img/cpg/600/rightmiddle.jpg);
+  }
+  .panel5 {
+    background-image: url(../img/cpg/600/right.jpg);
+  }
+}
+
+@media only screen and (min-height: 55em), (min-width: 55em) {
+  .panel1 {
+    background-image: url(../img/cpg/1k/left.jpg);
+  }
+  .panel2 {
+    background-image: url(../img/cpg/1k/leftmiddle.jpg);
+  }
+  .panel3 {
+    background-image: url(../img/cpg/1k/center.jpg);
+  }
+  .panel4 {
+    background-image: url(../img/cpg/1k/rightmiddle.jpg);
+  }
+  .panel5 {
+    background-image: url(../img/cpg/1k/right.jpg);
+  }
+}
+
+@media only screen and (min-height: 75em), (min-width: 75em) {
+  .panel1 {
+    background-image: url(../img/cpg/1.5k/left.jpg);
+  }
+  .panel2 {
+    background-image: url(../img/cpg/1.5k/leftmiddle.jpg);
+  }
+  .panel3 {
+    background-image: url(../img/cpg/1.5k/center.jpg);
+  }
+  .panel4 {
+    background-image: url(../img/cpg/1.5k/rightmiddle.jpg);
+  }
+  .panel5 {
+    background-image: url(../img/cpg/1.5k/right.jpg);
+  }
+}
+
+@media only screen and (min-height: 1441px) {
+  .panel1 {
+    background-image: url(../img/cpg/2k/left.jpg);
+  }
+  .panel2 {
+    background-image: url(../img/cpg/2k/leftmiddle.jpg);
+  }
+  .panel3 {
+    background-image: url(../img/cpg/2k/center.jpg);
+  }
+  .panel4 {
+    background-image: url(../img/cpg/2k/rightmiddle.jpg);
+  }
+  .panel5 {
+    background-image: url(../img/cpg/2k/right.jpg);
+  }
 }

@@ -9,23 +9,20 @@ const toggleBackgroundClass = () => {
 
 zionTitle.addEventListener("click", toggleBackgroundClass);
 
-//! NEW TEST
-
-const modal = document.getElementById("myModal");
+const zionModal = document.getElementById("myModal");
 let modalImg = document.getElementById("img01");
 
 const imageModal = e => {
   const srcImage = e.srcElement.currentSrc;
-  modal.style.display = "block";
+  zionModal.style.display = "block";
   modalImg.src = srcImage;
 };
 
-// Get the <span> element that closes the modal
 const span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on <span> (x), close the modal
+// Closes the modal
 span.onclick = function() {
-  modal.style.display = "none";
+  zionModal.style.display = "none";
 };
 
 // Select all children images of wrapping div, and add onClick event listeners to trigger modal.
