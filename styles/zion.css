@@ -733,9 +733,11 @@ body {
 /* Modal Image Styling */
 .modal-content {
   margin: auto;
+  margin-bottom: 1em;
   display: block;
   width: 74vw;
   max-width: 85vw;
+  max-height: 90vh;
   border-radius: 5px;
   -webkit-animation: zoom 0.6s ease forwards;
   animation: zoom 0.6s ease forwards;
